@@ -1,0 +1,16 @@
+menuconfig CHARGING_ALGO
+	bool "Charging algorithms support"
+	help
+	  Enables the in-kernel charging algorithm framework for
+	  charger or power supply drivers.
+
+	  Say Y here to enable Charging Algorithm support
+
+if CHARGING_ALGO
+
+config CHARGING_ALGO_BXT
+	bool "Intel Broxton Charging Algo"
+	help
+	  This driver supports Intel Broxton PSE Charging Algorithm.
+
+endif
